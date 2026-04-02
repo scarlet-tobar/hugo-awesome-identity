@@ -1,5 +1,5 @@
 .profile {
-  text-align: center;
+  text-align: left;
 
   .portrait {
     position: relative;
@@ -57,8 +57,12 @@
   .bio {
     font-size: 0.9rem;
 
+    h1, h2 {
+      text-align: center;
+    }
+
     p {
-      margin-top: 0.9em;
+      margin: 0.9em;
     }
     a:hover {
       color: initial;
