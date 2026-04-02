@@ -32,37 +32,17 @@ commands:
 
 
 jobs:
-  build-hugo-0-55:
+  build-hugo:
     executor:
       name: hugo
-      version: "0.55"
     steps:
     - checkout_with_git_submodules
     - build_hugo
     - test_html
-  build-hugo-0-54:
-    executor:
-      name: hugo
-      version: "0.54"
-    steps:
-    - checkout_with_git_submodules
-    - build_hugo
-    - test_html
-  build-hugo-0-53:
-    executor:
-      name: hugo
-      version: "0.53"
-    steps:
-    - checkout_with_git_submodules
-    - build_hugo
-    - test_html
-
 
 workflows:
   version: 2
   build-and-test:
     jobs:
-    - build-hugo-0-55
-    - build-hugo-0-54
-    - build-hugo-0-53
+    - build-hugo
 
